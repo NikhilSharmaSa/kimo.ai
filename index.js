@@ -25,7 +25,7 @@ main()
 }).catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/kimo');
+  await mongoose.connect('mongodb+srv://nikhilpandit:lHrjQU79nbwD21vo@cluster0.khqie.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 }
 

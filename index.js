@@ -57,8 +57,9 @@ app.post('/courses:id/chapter:chapter_id/reviews:sno',validateReview,asyncWrap(a
     }))
 
 
-app.get('/',(req,res)=>{
-    res.send('working fine ')
+app.get('/',async(req,res)=>{
+    const allData= await Course.find({})
+    res.render('course/index',{allData})
 })
 app.get('/courses', asyncWrap(async(req,res)=>{
     const allData= await Course.find({})

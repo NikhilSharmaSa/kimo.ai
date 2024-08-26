@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+
+    
+ 
+
+   
+
+
+    <div class="container  py-5">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Sort By
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/courses">All</a></li>
+          <li><a class="dropdown-item" href="/courses/shortna">Name</a></li>
+          <li><a class="dropdown-item" href="/courses/shortda">Date</a></li>
+          <li><a class="dropdown-item" href="/courses/shortra">Rating</a></li>
+          <li><a class="dropdown-item" href="/courses/shortdo">Domain</a></li>
+        </ul>
+      </div>
+  <div class="row main-Data">
+
+    <% 
+    let sn=0;
+   allData.forEach(element => { 
+     sn++;
+     %>
+   
+    <div class="col mt-5" style="width:20rem">
+      <a href="/courses<%= element.id  %>" class="dist">
+    <div class="card" >
+  <img src="https://images.unsplash.com/photo-1555967522-37949fc21dcb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9va3N8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="listing-images" style="width:100%; height:200px" >
+  <div class="card-body">
+    <h5 class="card-title"><%= element.name  %></h5>
+    <p class="card-text"><%=new Date(element.date).toLocaleDateString("en-US")  %></p>
+  </div>
+
+    <h5 class="px-2 py-2">Domains</h5>
+    <div class="row px-2">
+    <% element.domain.forEach(el => {
+  %>
+  <div class="col">
+  <span class="badge  text-bg-primary " ><%=el %></span>
+</div>
+  <%
+});
+ %>
+</div>
+</div>
+</a>
+    </div>
+ 
+    <% });  %>
+  </div>
+</div>
+
+
+
+
+</body>

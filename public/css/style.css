@@ -1,0 +1,44 @@
+.navbar{
+    height:5rem;
+   
+}
+
+.fa-graduation-cap{
+    color: rgb(15, 2, 39);
+    font-size: 3rem;
+}
+.nav-link{
+    color: #000000 !important;
+}
+
+footer{
+    background-color:rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+    height: 5rem;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.f-info-socials{
+    font-size: 2rem;
+}
+
+.jj{
+    cursor: pointer;
+}
+
+.dist{
+    text-decoration: none;
+    color: #000000;
+}
+
+.dist:hover{
+    text-decoration: none;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
